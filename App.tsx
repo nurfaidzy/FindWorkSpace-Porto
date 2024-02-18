@@ -5,21 +5,19 @@
  * @format
  */
 
+import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
-import {SafeAreaView, StyleSheet, Text} from 'react-native';
-
+import Home from './src/screens/Home/index';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+const Stack = createNativeStackNavigator();
 function App(): React.JSX.Element {
   return (
-    <SafeAreaView style={style.container}>
-      <Text>Hello Word</Text>
-    </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={Home} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const style = StyleSheet.create({
-  container: {
-    backgroundColor: 'green',
-  },
-});
 
 export default App;
