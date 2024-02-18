@@ -1,22 +1,19 @@
-import {View, Text, TouchableOpacity} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 import React from 'react';
-import {NavigationProp, useNavigation} from '@react-navigation/native';
-import {RootStackParamList} from '../../interfaces/HomeInterface';
+import {colors} from '../../../assets/styles/Colors';
+import Header from './Header';
 
 export default function HomePage() {
-  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
-
   return (
-    <View style={{backgroundColor: 'green'}}>
-      <Text>HomePage</Text>
-      <TouchableOpacity>
-        <Text
-          onPress={() => {
-            navigation.navigate('Details');
-          }}>
-          Reditect To Details
-        </Text>
-      </TouchableOpacity>
+    <View style={style.container}>
+      <View>{Header()}</View>
     </View>
   );
 }
+
+const style = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: colors.greyLight,
+  },
+});
