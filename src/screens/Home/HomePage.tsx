@@ -3,6 +3,7 @@ import React from 'react';
 import {colors} from '../../../assets/styles/Colors';
 import Header from './Header';
 import SearchBar from './SearchBar';
+import PopularSectin from './PopularSectin';
 
 export default function HomePage() {
   return (
@@ -13,6 +14,9 @@ export default function HomePage() {
           icon={require('../../../assets/icons/location.png')}
           placeholder="Find Work Space at Jakarta"
         />
+      </View>
+      <View>
+        <PopularSectin />
       </View>
     </View>
   );
