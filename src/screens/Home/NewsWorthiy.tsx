@@ -69,8 +69,8 @@ export default function NewsWorthiy() {
     },
   ];
   return (
-    <View>
-      <Text>NewsWorthiy</Text>
+    <View style={style.pageSize}>
+      <Text style={style.mainText}>NewsWorthy</Text>
       <View>
         <FlatList
           horizontal
@@ -95,6 +95,15 @@ export default function NewsWorthiy() {
 }
 
 const style = StyleSheet.create({
+  mainText: {
+    ...Gs.h1,
+    ...Gs.textBlack,
+    marginBottom: 12,
+    fontSize: 20,
+  },
+  pageSize: {
+    paddingHorizontal: 20,
+  },
   container: {
     marginRight: 40,
     marginBottom: 24,

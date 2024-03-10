@@ -58,8 +58,10 @@ const style = StyleSheet.create({
     marginBottom: 10,
   },
   textStyle: {
+    ...Gs.h1,
     ...Gs.textBlack,
     marginBottom: 12,
+    fontSize: 20,
   },
 
   populerContent: {
